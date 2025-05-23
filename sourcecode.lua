@@ -2404,6 +2404,7 @@ FarmsTabImport:CreateToggle({
 
 
 
+
 shoefarm = false
 FarmsTabImport:CreateToggle({
     Name = "Shoe Farm",
@@ -2412,45 +2413,32 @@ FarmsTabImport:CreateToggle({
     Callback = function(bool)
         if bool then
             shoefarm = true
-repeat wait(.1)
-			pcall(function()
-				fireclickdetector(game:GetService("Workspace").Ignored["Clean the shoes on the floor and come to me for cash"].ClickDetector)
-				for i,v in pairs(workspace.Ignored.Drop:GetChildren()) do
-					if  v.Transparency == 0 and v:IsA("MeshPart") then
-						game.Players.LocalPlayer.Character.HumanoidRootPart.Position = v.Position
-						wait()
-						fireclickdetector(v.ClickDetector)
-					end
-				end
-			end)
-			until shoefarm == false
+            repeat
+                task.wait(0.2) 
+                pcall(function()
+                    local clickDetector = game:GetService("Workspace").Ignored["Clean the shoes on the floor and come to me for cash"].ClickDetector
+                    fireclickdetector(clickDetector)
 
-else
-shoefarm = false
-Notif("Please wait as we turn shoe farm off", 6)
-game.Players.LocalPlayer.Character.Head:Destroy()
-game.Players.LocalPlayer.Character.RightHand:Destroy()
-game.Players.LocalPlayer.Character.LeftHand:Destroy()
-game.Players.LocalPlayer.Character.LowerTorso:Destroy()
-game.Players.LocalPlayer.Character.UpperTorso:Destroy()
-game.Players.LocalPlayer.Character.LeftLowerLeg:Destroy()
-game.Players.LocalPlayer.Character.RightLowerLeg:Destroy()
-game.Players.LocalPlayer.Character.RightFoot:Destroy()
-game.Players.LocalPlayer.Character.LeftFoot:Destroy()
-game.Players.LocalPlayer.Character.LeftUpperLeg:Destroy()
-game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
-game.Players.LocalPlayer.Character.RightUpperArm:Destroy()
-game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
-game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
-game.Players.LocalPlayer.Character.LeftUpperArm:Destroy()
-wait(5)
-Notif("Shoe Farm Disabled!", 5)
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(shoefarmoldpos)
+                    for _, v in pairs(workspace.Ignored.Drop:GetChildren()) do
+                        if v.Transparency == 0 and v:IsA("MeshPart") then
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+                            task.wait(0.1)
+                            fireclickdetector(v.ClickDetector)
+                        end
+                    end
+                end)
+            until not shoefarm
+        else
+            shoefarm = false
+            Notif("Shoe Farm Disabled!", 5)
 
-end
-
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(shoefarmoldpos)
         end
+    end
 })
+
+
+
 
 
 
