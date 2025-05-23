@@ -2,7 +2,6 @@
 
 Shadow-GUI is a Lua script made specifically for the Roblox game **Da Hood**. Due to updates in the game’s anti-cheat system, **Shadow-GUI has been officially discontinued** and is no longer maintained or supported.
 
-If you still want to use or study the old Shadow-GUI script, you’re free to do so. While it’s not “free software” in the traditional sense, the source code has always been openly available — never obfuscated or hidden like many other Roblox exploits.
 
 ---
 
