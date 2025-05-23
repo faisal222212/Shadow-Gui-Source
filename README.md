@@ -20,3 +20,10 @@ Yes, you can freely copy, modify, or use the Shadow-GUI script — **no permissi
 
 > Credit me as **Faisal**  
 > Shadow-GUI was originally created by **Faisal**
+
+---
+
+## Script Showcase
+
+If you'd like to see Shadow-GUI in action, here's a showcase video:  
+🎥 [Watch on YouTube](https://www.youtube.com/watch?v=c7s5UMO9cvo)
