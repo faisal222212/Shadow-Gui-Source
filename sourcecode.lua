@@ -1172,9 +1172,6 @@ CombatSelection:CreateToggle({
     Flag = "Anti Stomp",
     Default = false,
     Callback = function(enabled)
-        local player = game.Players.LocalPlayer
-        local character = player.Character
-        local humanoid = character and character:FindFirstChildOfClass("Humanoid")
 
         if enabled then
             game:GetService('RunService'):BindToRenderStep("Anti-Stomp", 0, function()
