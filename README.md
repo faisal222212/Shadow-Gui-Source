@@ -2,7 +2,6 @@
 
 Shadow-GUI is a Lua script made specifically for the Roblox game **Da Hood**. Due to updates in the game’s anti-cheat system, **Shadow-GUI has been officially discontinued** and is no longer maintained or supported.
 
-
 ---
 
 ## Shadow-GUI Source Code
@@ -10,7 +9,8 @@ Shadow-GUI is a Lua script made specifically for the Roblox game **Da Hood**. Du
 This repository contains the **old and outdated** Shadow-GUI source code. Please be aware:
 
 - Some functions (like `grippos` and others) may lead to bans — use carefully and at your own risk.  
-- Parts of the script were sourced from others; proper credit has been given where due.
+- Parts of the script were sourced from others; proper credit has been given where due.  
+- **This script is outdated and no longer usable in its current form.**
 
 ---
 
@@ -20,11 +20,3 @@ Yes, you can freely copy, modify, or use the Shadow-GUI script — **no permissi
 
 > Credit me as **Faisal**  
 > Shadow-GUI was originally created by **Faisal**
-
----
-
-This script is for educational and reference purposes, and while you’re free to use it, please remember the risks involved with outdated cheats in Roblox games like Da Hood.
-
----
-
-Let me know if you want me to format this for GitHub, Pastebin, or any other platform!
